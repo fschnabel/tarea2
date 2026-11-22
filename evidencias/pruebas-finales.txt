@@ -1,0 +1,24 @@
+Evidencia de pruebas finales - Grupo 1
+======================================
+
+Proyecto: tarea 2
+Fecha: 2026-11-21 23:27:21 -05:00
+Node.js: v22.18.0
+npm: 11.5.2
+Casos ejecutados: CP-04, CP-06, CP-07 y CP-08
+Comando: npm test -- --testNamePattern=CP-04|CP-06|CP-07|CP-08
+Código de salida: 0
+
+La corrida inicial sobre el código original está en pruebas-iniciales.txt.
+Salida de Jest de este grupo:
+-----------------------------
+
+
+> tarea-2@1.0.0 test
+> jest --runInBand --testNamePattern=CP-04|CP-06|CP-07|CP-08
+
+Test Suites: 1 passed, 1 total
+Tests:       12 skipped, 4 passed, 16 total
+Snapshots:   0 total
+Time:        4.442 s
+Ran all test suites with tests matching "CP-04|CP-06|CP-07|CP-08".

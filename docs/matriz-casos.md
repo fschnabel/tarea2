@@ -12,11 +12,11 @@ CP-17 y CP-18 todavía no se han ejecutado.
 | CP-01 | RF-01, RF-02, RF-03 | Datos válidos | `100, 2, 10` | Total `180.00`. | Alta | Aprobado (inicial) |
 | CP-02 | RF-02, RF-03 | Descuento mínimo: 0 % | `100, 2, 0` | Total `200.00`. | Alta | Aprobado (inicial) |
 | CP-03 | RF-02, RF-03 | Descuento máximo: 100 % | `100, 2, 100` | Total `0.00`. | Alta | Aprobado (inicial) |
-| CP-04 | RF-04 | Descuento menor que 0 % | `100, 2, -0.01` | Lanza `RangeError`. | Alta | Falló (inicial) |
+| CP-04 | RF-04 | Descuento menor que 0 % | `100, 2, -0.01` | Lanza `RangeError`. | Alta | Corregido; pasa en grupo 1 |
 | CP-05 | RF-04 | Descuento mayor que 100 % | `100, 2, 100.01` | Lanza `RangeError`. | Alta | Falló (inicial) |
-| CP-06 | RF-04 | Precio negativo | `-1, 2, 10` | Lanza `RangeError`. | Alta | Falló (inicial) |
-| CP-07 | RF-04 | Cantidad igual a cero | `100, 0, 10` | Lanza `RangeError`. | Alta | Falló (inicial) |
-| CP-08 | RF-04 | Cantidad negativa | `100, -1, 10` | Lanza `RangeError`. | Alta | Falló (inicial) |
+| CP-06 | RF-04 | Precio negativo | `-1, 2, 10` | Lanza `RangeError`. | Alta | Corregido; pasa en grupo 1 |
+| CP-07 | RF-04 | Cantidad igual a cero | `100, 0, 10` | Lanza `RangeError`. | Alta | Corregido; pasa en grupo 1 |
+| CP-08 | RF-04 | Cantidad negativa | `100, -1, 10` | Lanza `RangeError`. | Alta | Corregido; pasa en grupo 1 |
 | CP-09 | RF-05 | Precio no numérico | `"100", 2, 10` | Lanza `TypeError`. | Alta | Falló (inicial) |
 | CP-10 | RF-05 | Cantidad no numérica | `100, "2", 10` | Lanza `TypeError`. | Alta | Falló (inicial) |
 | CP-11 | RF-05 | Descuento no numérico | `100, 2, "10"` | Lanza `TypeError`. | Alta | Falló (inicial) |
