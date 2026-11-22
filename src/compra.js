@@ -1,7 +1,15 @@
 
 function calcularTotal(precio, cantidad, descuento) {
+  const entradas = [precio, cantidad, descuento];
+  if (entradas.some((valor) => typeof valor !== "number")) {
+    throw new TypeError("Las entradas deben ser números");
+  }
+
   if (precio < 0 || cantidad <= 0 || descuento < 0) {
     throw new RangeError("Los valores están fuera del rango permitido");
+  }
+  if (descuento > 100) {
+    throw new RangeError("El descuento no puede superar el 100 %");
   }
 
   const subtotal = precio * cantidad;
