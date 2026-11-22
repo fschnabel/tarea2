@@ -5,7 +5,8 @@
 Los casos se diseñaron a partir de la especificación. Se ejecutaron 16 pruebas
 iniciales sobre el código original; los resultados están en
 [`../evidencias/pruebas-iniciales.txt`](../evidencias/pruebas-iniciales.txt).
-CP-17 y CP-18 todavía no se han ejecutado.
+CP-17 está pendiente de aclaración. CP-18 se midió por separado; ver
+[`reporte-pruebas.md`](./reporte-pruebas.md).
 
 | ID | Requisito | Técnica | Datos: precio, cantidad, descuento | Resultado esperado | Prioridad | Estado |
 |---|---|---|---|---|---|---|
@@ -26,7 +27,7 @@ CP-17 y CP-18 todavía no se han ejecutado.
 | CP-15 | RF-03 | Revisar decimales | `19.99, 3, 10` | Total redondeado a dos decimales: `53.97`. | Media | Pasa regresión |
 | CP-16 | RF-01, RF-03 | Cantidad positiva con decimales | `10, 1.5, 0` | Total `15.00`. | Media | Pasa regresión |
 | CP-17 | RF-01, RF-04 | Revisar precio cero | `0, 2, 10` | Confirmar el resultado: la especificación pide números positivos y menciona error para precio negativo, pero no aclara el precio cero. | Media | Pendiente |
-| CP-18 | RNF-01 | Medición sencilla | `100, 2, 10`; repetir 100 veces | Anotar el tiempo total y promedio. No se especifica un tiempo máximo. | Baja | Pendiente |
+| CP-18 | RNF-01 | Medición sencilla | `100, 2, 10`; 100 llamadas de calentamiento y 1.000 medidas | Registrar tiempos total y promedio; RNF-01 no especifica un tiempo máximo. | Baja | Medido; sin umbral |
 
 ## Cobertura
 
@@ -34,4 +35,4 @@ CP-17 y CP-18 todavía no se han ejecutado.
 - Particiones inválidas (datos fuera de rango o de tipo incorrecto): CP-04 a CP-14.
 - Valores límite: CP-02 a CP-08 y CP-17.
 - Decimales: CP-15 y CP-16.
-- Rendimiento: CP-18.
+- Rendimiento: CP-18; medición exploratoria documentada en `reporte-pruebas.md`.

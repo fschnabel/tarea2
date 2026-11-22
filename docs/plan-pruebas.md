@@ -45,9 +45,10 @@ navegador.
 - Registrar la versión de Node.js.
 - No se necesita conexión a internet, base de datos ni Docker.
 - Las pruebas automatizadas usan Jest y se ejecutan con `npm test`.
-- Para RNF-01, ejecutar 100 veces un caso válido y anotar el tiempo total, el
-  promedio y las condiciones del equipo. La especificación no indica un tiempo
-  máximo, así que las mediciones son informativas.
+- Para RNF-01, calentar con 100 llamadas y medir 10 bloques de 100 llamadas
+  válidas. Anotar el tiempo total, promedio y condiciones del equipo. La
+  especificación no indica un tiempo máximo, así que las mediciones son
+  informativas. Ver el resultado en [`reporte-pruebas.md`](./reporte-pruebas.md).
 
 ## Criterios de entrada
 
