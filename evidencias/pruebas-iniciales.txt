@@ -1,0 +1,238 @@
+Evidencia de pruebas iniciales
+==============================
+
+Proyecto: tarea 2
+Código bajo prueba: src/compra.js original, sin modificaciones
+Node.js: v22.18.0
+npm: 11.5.2
+Comando: npm test (script: jest --runInBand)
+Código de salida: 1
+
+Salida de Jest:
+--------------
+
+
+> tarea-2@1.0.0 test
+> jest --runInBand
+
+FAIL tests/compras.test.js
+  ● calcularTotal › CP-15: devuelve el total con dos decimales
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 53.97
+    Received: 53.973
+
+    [0m [90m 15 |[39m
+     [90m 16 |[39m   test([32m"CP-15: devuelve el total con dos decimales"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 17 |[39m     expect(calcularTotal([35m19.99[39m[33m,[39m [35m3[39m[33m,[39m [35m10[39m))[33m.[39mtoBe([35m53.97[39m)[33m;[39m
+     [90m    |[39m                                         [31m[1m^[22m[39m
+     [90m 18 |[39m   })[33m;[39m
+     [90m 19 |[39m
+     [90m 20 |[39m   test([32m"CP-16: acepta una cantidad positiva decimal"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.toBe (tests/compras.test.js:17:41)
+
+  ● calcularTotal › CP-06: precio negativo lanza RangeError
+
+    expect(received).toThrow(expected)
+
+    Expected constructor: RangeError
+
+    Received function did not throw
+
+    [0m [90m 31 |[39m     [32m"%s lanza RangeError"[39m[33m,[39m
+     [90m 32 |[39m     (_caso[33m,[39m precio[33m,[39m cantidad[33m,[39m descuento) [33m=>[39m {
+    [31m[1m>[22m[39m[90m 33 |[39m       expect(() [33m=>[39m calcularTotal(precio[33m,[39m cantidad[33m,[39m descuento))[33m.[39mtoThrow([33mRangeError[39m)[33m;[39m
+     [90m    |[39m                                                                [31m[1m^[22m[39m
+     [90m 34 |[39m     }[33m,[39m
+     [90m 35 |[39m   )[33m;[39m
+     [90m 36 |[39m[0m
+
+      at toThrow (tests/compras.test.js:33:64)
+
+  ● calcularTotal › CP-07: cantidad cero lanza RangeError
+
+    expect(received).toThrow(expected)
+
+    Expected constructor: RangeError
+
+    Received function did not throw
+
+    [0m [90m 31 |[39m     [32m"%s lanza RangeError"[39m[33m,[39m
+     [90m 32 |[39m     (_caso[33m,[39m precio[33m,[39m cantidad[33m,[39m descuento) [33m=>[39m {
+    [31m[1m>[22m[39m[90m 33 |[39m       expect(() [33m=>[39m calcularTotal(precio[33m,[39m cantidad[33m,[39m descuento))[33m.[39mtoThrow([33mRangeError[39m)[33m;[39m
+     [90m    |[39m                                                                [31m[1m^[22m[39m
+     [90m 34 |[39m     }[33m,[39m
+     [90m 35 |[39m   )[33m;[39m
+     [90m 36 |[39m[0m
+
+      at toThrow (tests/compras.test.js:33:64)
+
+  ● calcularTotal › CP-08: cantidad negativa lanza RangeError
+
+    expect(received).toThrow(expected)
+
+    Expected constructor: RangeError
+
+    Received function did not throw
+
+    [0m [90m 31 |[39m     [32m"%s lanza RangeError"[39m[33m,[39m
+     [90m 32 |[39m     (_caso[33m,[39m precio[33m,[39m cantidad[33m,[39m descuento) [33m=>[39m {
+    [31m[1m>[22m[39m[90m 33 |[39m       expect(() [33m=>[39m calcularTotal(precio[33m,[39m cantidad[33m,[39m descuento))[33m.[39mtoThrow([33mRangeError[39m)[33m;[39m
+     [90m    |[39m                                                                [31m[1m^[22m[39m
+     [90m 34 |[39m     }[33m,[39m
+     [90m 35 |[39m   )[33m;[39m
+     [90m 36 |[39m[0m
+
+      at toThrow (tests/compras.test.js:33:64)
+
+  ● calcularTotal › CP-04: descuento negativo lanza RangeError
+
+    expect(received).toThrow(expected)
+
+    Expected constructor: RangeError
+
+    Received function did not throw
+
+    [0m [90m 31 |[39m     [32m"%s lanza RangeError"[39m[33m,[39m
+     [90m 32 |[39m     (_caso[33m,[39m precio[33m,[39m cantidad[33m,[39m descuento) [33m=>[39m {
+    [31m[1m>[22m[39m[90m 33 |[39m       expect(() [33m=>[39m calcularTotal(precio[33m,[39m cantidad[33m,[39m descuento))[33m.[39mtoThrow([33mRangeError[39m)[33m;[39m
+     [90m    |[39m                                                                [31m[1m^[22m[39m
+     [90m 34 |[39m     }[33m,[39m
+     [90m 35 |[39m   )[33m;[39m
+     [90m 36 |[39m[0m
+
+      at toThrow (tests/compras.test.js:33:64)
+
+  ● calcularTotal › CP-05: descuento mayor que 100 lanza RangeError
+
+    expect(received).toThrow(expected)
+
+    Expected constructor: RangeError
+
+    Received function did not throw
+
+    [0m [90m 31 |[39m     [32m"%s lanza RangeError"[39m[33m,[39m
+     [90m 32 |[39m     (_caso[33m,[39m precio[33m,[39m cantidad[33m,[39m descuento) [33m=>[39m {
+    [31m[1m>[22m[39m[90m 33 |[39m       expect(() [33m=>[39m calcularTotal(precio[33m,[39m cantidad[33m,[39m descuento))[33m.[39mtoThrow([33mRangeError[39m)[33m;[39m
+     [90m    |[39m                                                                [31m[1m^[22m[39m
+     [90m 34 |[39m     }[33m,[39m
+     [90m 35 |[39m   )[33m;[39m
+     [90m 36 |[39m[0m
+
+      at toThrow (tests/compras.test.js:33:64)
+
+  ● calcularTotal › CP-09: precio no numérico lanza TypeError
+
+    expect(received).toThrow(expected)
+
+    Expected constructor: TypeError
+
+    Received function did not throw
+
+    [0m [90m 42 |[39m     [32m"%s lanza TypeError"[39m[33m,[39m
+     [90m 43 |[39m     (_caso[33m,[39m precio[33m,[39m cantidad[33m,[39m descuento) [33m=>[39m {
+    [31m[1m>[22m[39m[90m 44 |[39m       expect(() [33m=>[39m calcularTotal(precio[33m,[39m cantidad[33m,[39m descuento))[33m.[39mtoThrow([33mTypeError[39m)[33m;[39m
+     [90m    |[39m                                                                [31m[1m^[22m[39m
+     [90m 45 |[39m     }[33m,[39m
+     [90m 46 |[39m   )[33m;[39m
+     [90m 47 |[39m[0m
+
+      at toThrow (tests/compras.test.js:44:64)
+
+  ● calcularTotal › CP-10: cantidad no numérica lanza TypeError
+
+    expect(received).toThrow(expected)
+
+    Expected constructor: TypeError
+
+    Received function did not throw
+
+    [0m [90m 42 |[39m     [32m"%s lanza TypeError"[39m[33m,[39m
+     [90m 43 |[39m     (_caso[33m,[39m precio[33m,[39m cantidad[33m,[39m descuento) [33m=>[39m {
+    [31m[1m>[22m[39m[90m 44 |[39m       expect(() [33m=>[39m calcularTotal(precio[33m,[39m cantidad[33m,[39m descuento))[33m.[39mtoThrow([33mTypeError[39m)[33m;[39m
+     [90m    |[39m                                                                [31m[1m^[22m[39m
+     [90m 45 |[39m     }[33m,[39m
+     [90m 46 |[39m   )[33m;[39m
+     [90m 47 |[39m[0m
+
+      at toThrow (tests/compras.test.js:44:64)
+
+  ● calcularTotal › CP-11: descuento no numérico lanza TypeError
+
+    expect(received).toThrow(expected)
+
+    Expected constructor: TypeError
+
+    Received function did not throw
+
+    [0m [90m 42 |[39m     [32m"%s lanza TypeError"[39m[33m,[39m
+     [90m 43 |[39m     (_caso[33m,[39m precio[33m,[39m cantidad[33m,[39m descuento) [33m=>[39m {
+    [31m[1m>[22m[39m[90m 44 |[39m       expect(() [33m=>[39m calcularTotal(precio[33m,[39m cantidad[33m,[39m descuento))[33m.[39mtoThrow([33mTypeError[39m)[33m;[39m
+     [90m    |[39m                                                                [31m[1m^[22m[39m
+     [90m 45 |[39m     }[33m,[39m
+     [90m 46 |[39m   )[33m;[39m
+     [90m 47 |[39m[0m
+
+      at toThrow (tests/compras.test.js:44:64)
+
+  ● calcularTotal › CP-12: precio infinito lanza TypeError
+
+    expect(received).toThrow(expected)
+
+    Expected constructor: TypeError
+
+    Received function did not throw
+
+    [0m [90m 53 |[39m     [32m"%s lanza TypeError"[39m[33m,[39m
+     [90m 54 |[39m     (_caso[33m,[39m precio[33m,[39m cantidad[33m,[39m descuento) [33m=>[39m {
+    [31m[1m>[22m[39m[90m 55 |[39m       expect(() [33m=>[39m calcularTotal(precio[33m,[39m cantidad[33m,[39m descuento))[33m.[39mtoThrow([33mTypeError[39m)[33m;[39m
+     [90m    |[39m                                                                [31m[1m^[22m[39m
+     [90m 56 |[39m     }[33m,[39m
+     [90m 57 |[39m   )[33m;[39m
+     [90m 58 |[39m })[33m;[39m[0m
+
+      at toThrow (tests/compras.test.js:55:64)
+
+  ● calcularTotal › CP-13: cantidad infinita lanza TypeError
+
+    expect(received).toThrow(expected)
+
+    Expected constructor: TypeError
+
+    Received function did not throw
+
+    [0m [90m 53 |[39m     [32m"%s lanza TypeError"[39m[33m,[39m
+     [90m 54 |[39m     (_caso[33m,[39m precio[33m,[39m cantidad[33m,[39m descuento) [33m=>[39m {
+    [31m[1m>[22m[39m[90m 55 |[39m       expect(() [33m=>[39m calcularTotal(precio[33m,[39m cantidad[33m,[39m descuento))[33m.[39mtoThrow([33mTypeError[39m)[33m;[39m
+     [90m    |[39m                                                                [31m[1m^[22m[39m
+     [90m 56 |[39m     }[33m,[39m
+     [90m 57 |[39m   )[33m;[39m
+     [90m 58 |[39m })[33m;[39m[0m
+
+      at toThrow (tests/compras.test.js:55:64)
+
+  ● calcularTotal › CP-14: descuento NaN lanza TypeError
+
+    expect(received).toThrow(expected)
+
+    Expected constructor: TypeError
+
+    Received function did not throw
+
+    [0m [90m 53 |[39m     [32m"%s lanza TypeError"[39m[33m,[39m
+     [90m 54 |[39m     (_caso[33m,[39m precio[33m,[39m cantidad[33m,[39m descuento) [33m=>[39m {
+    [31m[1m>[22m[39m[90m 55 |[39m       expect(() [33m=>[39m calcularTotal(precio[33m,[39m cantidad[33m,[39m descuento))[33m.[39mtoThrow([33mTypeError[39m)[33m;[39m
+     [90m    |[39m                                                                [31m[1m^[22m[39m
+     [90m 56 |[39m     }[33m,[39m
+     [90m 57 |[39m   )[33m;[39m
+     [90m 58 |[39m })[33m;[39m[0m
+
+      at toThrow (tests/compras.test.js:55:64)
+
+Test Suites: 1 failed, 1 total
+Tests:       12 failed, 4 passed, 16 total
+Snapshots:   0 total
+Time:        0.549 s, estimated 5 s
+Ran all test suites.

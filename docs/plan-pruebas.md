@@ -44,8 +44,7 @@ navegador.
 - Usar Node.js y ejecutar desde la carpeta de tarea 2.
 - Registrar la versión de Node.js.
 - No se necesita conexión a internet, base de datos ni Docker.
-- Se propone automatizar los casos con `node:test` en una fase posterior.
-  Tarea 2 aún no tiene un comando de pruebas configurado.
+- Las pruebas automatizadas usan Jest y se ejecutan con `npm test`.
 - Para RNF-01, ejecutar 100 veces un caso válido y anotar el tiempo total, el
   promedio y las condiciones del equipo. La especificación no indica un tiempo
   máximo, así que las mediciones son informativas.
@@ -54,7 +53,7 @@ navegador.
 
 - Tener disponible `src/compra.js` y Node.js.
 - Contar con la especificación RF-01 a RF-05 y RNF-01.
-- Para automatizar las pruebas, agregar un comando de pruebas al proyecto.
+- Instalar las dependencias con `npm install` antes de ejecutar `npm test`.
 
 ## Criterios de salida
 
@@ -68,7 +67,8 @@ navegador.
 - No quedan fallos sin revisar.
 
 La matriz de casos está en [`matriz-casos.md`](./matriz-casos.md). Los casos
-están en estado `Pendiente`; todavía no se han ejecutado.
+se ejecutaron inicialmente sobre el código original. El resultado se conserva
+en [`../evidencias/pruebas-iniciales.txt`](../evidencias/pruebas-iniciales.txt).
 
 **Nota:** la especificación indica que el precio debe ser positivo y que un
 precio negativo produce `RangeError`, pero no aclara qué ocurre con precio
