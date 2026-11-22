@@ -1,0 +1,110 @@
+Evidencia de pruebas finales - Grupo 1
+======================================
+
+Proyecto: tarea 2
+Fecha: 2026-11-21 23:20:45 -05:00
+Node.js: v22.18.0
+npm: 11.5.2
+Casos del grupo: CP-04, CP-06, CP-07 y CP-08
+
+Ejecución inicial sobre el código original:
+Comando: npm test -- --testNamePattern="CP-04|CP-06|CP-07|CP-08"
+Código de salida: 1
+
+
+> tarea-2@1.0.0 test
+> jest --runInBand --testNamePattern=CP-04|CP-06|CP-07|CP-08
+
+FAIL tests/compras.test.js
+  ● calcularTotal - primer grupo › CP-04: descuento negativo lanza RangeError
+
+    expect(received).toThrow(expected)
+
+    Expected constructor: RangeError
+
+    Received function did not throw
+
+    [0m [90m  8 |[39m     [[32m"CP-08: cantidad negativa"[39m[33m,[39m [35m100[39m[33m,[39m [33m-[39m[35m1[39m[33m,[39m [35m10[39m][33m,[39m
+     [90m  9 |[39m   ])([32m"%s lanza RangeError"[39m[33m,[39m (_caso[33m,[39m precio[33m,[39m cantidad[33m,[39m descuento) [33m=>[39m {
+    [31m[1m>[22m[39m[90m 10 |[39m     expect(() [33m=>[39m calcularTotal(precio[33m,[39m cantidad[33m,[39m descuento))[33m.[39mtoThrow([33mRangeError[39m)[33m;[39m
+     [90m    |[39m                                                              [31m[1m^[22m[39m
+     [90m 11 |[39m   })[33m;[39m
+     [90m 12 |[39m })[33m;[39m
+     [90m 13 |[39m[0m
+
+      at toThrow (tests/compras.test.js:10:62)
+
+  ● calcularTotal - primer grupo › CP-06: precio negativo lanza RangeError
+
+    expect(received).toThrow(expected)
+
+    Expected constructor: RangeError
+
+    Received function did not throw
+
+    [0m [90m  8 |[39m     [[32m"CP-08: cantidad negativa"[39m[33m,[39m [35m100[39m[33m,[39m [33m-[39m[35m1[39m[33m,[39m [35m10[39m][33m,[39m
+     [90m  9 |[39m   ])([32m"%s lanza RangeError"[39m[33m,[39m (_caso[33m,[39m precio[33m,[39m cantidad[33m,[39m descuento) [33m=>[39m {
+    [31m[1m>[22m[39m[90m 10 |[39m     expect(() [33m=>[39m calcularTotal(precio[33m,[39m cantidad[33m,[39m descuento))[33m.[39mtoThrow([33mRangeError[39m)[33m;[39m
+     [90m    |[39m                                                              [31m[1m^[22m[39m
+     [90m 11 |[39m   })[33m;[39m
+     [90m 12 |[39m })[33m;[39m
+     [90m 13 |[39m[0m
+
+      at toThrow (tests/compras.test.js:10:62)
+
+  ● calcularTotal - primer grupo › CP-07: cantidad cero lanza RangeError
+
+    expect(received).toThrow(expected)
+
+    Expected constructor: RangeError
+
+    Received function did not throw
+
+    [0m [90m  8 |[39m     [[32m"CP-08: cantidad negativa"[39m[33m,[39m [35m100[39m[33m,[39m [33m-[39m[35m1[39m[33m,[39m [35m10[39m][33m,[39m
+     [90m  9 |[39m   ])([32m"%s lanza RangeError"[39m[33m,[39m (_caso[33m,[39m precio[33m,[39m cantidad[33m,[39m descuento) [33m=>[39m {
+    [31m[1m>[22m[39m[90m 10 |[39m     expect(() [33m=>[39m calcularTotal(precio[33m,[39m cantidad[33m,[39m descuento))[33m.[39mtoThrow([33mRangeError[39m)[33m;[39m
+     [90m    |[39m                                                              [31m[1m^[22m[39m
+     [90m 11 |[39m   })[33m;[39m
+     [90m 12 |[39m })[33m;[39m
+     [90m 13 |[39m[0m
+
+      at toThrow (tests/compras.test.js:10:62)
+
+  ● calcularTotal - primer grupo › CP-08: cantidad negativa lanza RangeError
+
+    expect(received).toThrow(expected)
+
+    Expected constructor: RangeError
+
+    Received function did not throw
+
+    [0m [90m  8 |[39m     [[32m"CP-08: cantidad negativa"[39m[33m,[39m [35m100[39m[33m,[39m [33m-[39m[35m1[39m[33m,[39m [35m10[39m][33m,[39m
+     [90m  9 |[39m   ])([32m"%s lanza RangeError"[39m[33m,[39m (_caso[33m,[39m precio[33m,[39m cantidad[33m,[39m descuento) [33m=>[39m {
+    [31m[1m>[22m[39m[90m 10 |[39m     expect(() [33m=>[39m calcularTotal(precio[33m,[39m cantidad[33m,[39m descuento))[33m.[39mtoThrow([33mRangeError[39m)[33m;[39m
+     [90m    |[39m                                                              [31m[1m^[22m[39m
+     [90m 11 |[39m   })[33m;[39m
+     [90m 12 |[39m })[33m;[39m
+     [90m 13 |[39m[0m
+
+      at toThrow (tests/compras.test.js:10:62)
+
+Test Suites: 1 failed, 1 total
+Tests:       4 failed, 4 total
+Snapshots:   0 total
+Time:        1.979 s
+Ran all test suites with tests matching "CP-04|CP-06|CP-07|CP-08".
+
+
+Ejecución después de la corrección:
+Comando: npm test -- --testNamePattern="CP-04|CP-06|CP-07|CP-08"
+Código de salida: 0
+
+
+> tarea-2@1.0.0 test
+> jest --runInBand --testNamePattern=CP-04|CP-06|CP-07|CP-08
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        0.524 s, estimated 2 s
+Ran all test suites with tests matching "CP-04|CP-06|CP-07|CP-08".
